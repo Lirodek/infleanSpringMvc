@@ -1,5 +1,7 @@
 package me.whiteship.java8to11.optional;
 
+import java.util.Optional;
+
 public class OnlineClass {
     private Integer id;
 
@@ -39,7 +41,14 @@ public class OnlineClass {
     }
 
     public Progress getProgress() {
+        if( this.progress == null ){
+            throw new IllegalStateException();
+        }
         return progress;
+    }
+
+    public Optional<Progress> getOptionalProgress(){
+        return Optional.empty(); //Optional.ofNullable(this.progress);
     }
 
     public void setProgress(Progress progress) {

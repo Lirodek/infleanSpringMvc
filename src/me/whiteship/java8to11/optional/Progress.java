@@ -12,7 +12,6 @@ public class Progress {
     }
 
     public Progress(Duration studyDuration) {
-        if(this.)
         this.studyDuration = studyDuration;
     }
 }
